@@ -3,7 +3,7 @@ problem : https://www.acmicpc.net/problem/11559
 solution :
 	BFS를 통해 넓이가 4이상인 경우 .으로 바꾸고 1, 그렇지 않으면 0 return
 	터지고 나서 맵 변경 // down()
-	현재 코드는 search 후 무조건 down인데 생각해보니 변하지 않았다면 down할 필요가 없음
+	현재 코드는 search 후 무조건 down인데 생각해보니 변하지 않았다면 down() 
 */
 #include <cstdio>
 #include <cstring>

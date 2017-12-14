@@ -1,9 +1,9 @@
 /*
 problem : https://www.acmicpc.net/problem/11559
 solution :
-		BFS¸¦ ÅëÇØ ³ÐÀÌ°¡ 4ÀÌ»óÀÎ °æ¿ì .À¸·Î ¹Ù²Ù°í 1, ±×·¸Áö ¾ÊÀ¸¸é 0 return
-		ÅÍÁö°í ³ª¼­ ¸Ê º¯°æ // down()
-		ÇöÀç ÄÚµå´Â search ÈÄ ¹«Á¶°Ç downÀÎµ¥ »ý°¢ÇØº¸´Ï º¯ÇÏÁö ¾Ê¾Ò´Ù¸é downÇÒ ÇÊ¿ä°¡ ¾øÀ½
+	BFSë¥¼ í†µí•´ ë„“ì´ê°€ 4ì´ìƒì¸ ê²½ìš° .ìœ¼ë¡œ ë°”ê¾¸ê³  1, ê·¸ë ‡ì§€ ì•Šìœ¼ë©´ 0 return
+	í„°ì§€ê³  ë‚˜ì„œ ë§µ ë³€ê²½ // down()
+	í˜„ìž¬ ì½”ë“œëŠ” search í›„ ë¬´ì¡°ê±´ downì¸ë° ìƒê°í•´ë³´ë‹ˆ ë³€í•˜ì§€ ì•Šì•˜ë‹¤ë©´ downí•  í•„ìš”ê°€ ì—†ìŒ
 */
 #include <cstdio>
 #include <cstring>

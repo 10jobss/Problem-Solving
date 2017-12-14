@@ -1,7 +1,7 @@
 /*
 problem : https://www.acmicpc.net/problem/3055
 solution :
-	물 이동 후 고슴도치 이동 (번갈아가면서 BFS)
+	물, 고슴도치 번갈아가면서 BFS
 	노드가 같은 레벨에 여러 개있는 경우 동시에 진행되므로 q_size, Q_size만큼 반복
 */
 #include <cstdio>

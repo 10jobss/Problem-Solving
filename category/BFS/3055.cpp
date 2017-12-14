@@ -1,8 +1,8 @@
 /*
 problem : https://www.acmicpc.net/problem/3055
 solution :
-¹° ÀÌµ¿ ÈÄ °í½¿µµÄ¡ ÀÌµ¿ (¹ø°¥¾Æ°¡¸é¼­ BFS)
-³ëµå°¡ °°Àº ·¹º§¿¡ ¿©·¯ °³ÀÖ´Â °æ¿ì µ¿½Ã¿¡ ÁøÇàµÇ¹Ç·Î q_size, Q_size¸¸Å­ ¹Ýº¹
+	ë¬¼ ì´ë™ í›„ ê³ ìŠ´ë„ì¹˜ ì´ë™ (ë²ˆê°ˆì•„ê°€ë©´ì„œ BFS)
+	ë…¸ë“œê°€ ê°™ì€ ë ˆë²¨ì— ì—¬ëŸ¬ ê°œìžˆëŠ” ê²½ìš° ë™ì‹œì— ì§„í–‰ë˜ë¯€ë¡œ q_size, Q_sizeë§Œí¼ ë°˜ë³µ
 */
 #include <cstdio>
 #include <queue>

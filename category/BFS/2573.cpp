@@ -1,12 +1,12 @@
 /*
 problem : https://www.acmicpc.net/problem/2573
 solution :
-	0ÀÌ ¾Æ´Ñ °÷À» enqueue // put()
-	empty queueÀÎ °æ¿ì return false (³ìÀÏ °÷ ¾øÀ½)
-	ÁÖº¯¿¡ 0ÀÎ °÷ Å½»ö ÈÄ ±âÁ¸ ¸Ê¿¡¼­ »©ÁØ´Ù
-	d¹è¿­Àº ´Ù½Ã ÃÊ±âÈ­ÇÏ°í return true (³ìÀÏ °÷ÀÌ ÀÖÀ½) // search()
-	conected component¸¦ À§ÇØ BFS // bfs(int, int)
-	³ì°í ³ª¼­ conected component°¡ 2°³ ÀÌ»óÀÌ¸é Á¾·á
+	0ì´ ì•„ë‹Œ ê³³ì„ enqueue // put()
+	empty queueì¸ ê²½ìš° return false (ë…¹ì¼ ê³³ ì—†ìŒ)
+	ì£¼ë³€ì— 0ì¸ ê³³ íƒìƒ‰ í›„ ê¸°ì¡´ ë§µì—ì„œ ë¹¼ì¤€ë‹¤
+	dë°°ì—´ì€ ë‹¤ì‹œ ì´ˆê¸°í™”í•˜ê³  return true (ë…¹ì¼ ê³³ì´ ì¡´ì¬) // search()
+	conected componentë¥¼ ìœ„í•´ BFS // bfs(int, int)
+	ë…¹ê³  ë‚˜ì„œ conected componentê°€ 2ê°œ ì´ìƒì´ë©´ ì¢…ë£Œ
 */
 #include <cstdio>
 #include <cstring>

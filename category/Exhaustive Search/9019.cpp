@@ -1,10 +1,11 @@
 /*
-	problem : https://www.acmicpc.net/problem/9019
-	solution :
-	BFS¸¦ ÀÌ¿ëÇÑ ¿ÏÀüÅ½»ö ¹®Á¦
-	¼ýÀÚ¸¦ node·Î »ý°¢ÇÏ°í D,S,L,R ¼öÇà ÈÄ »õ·Î¿î ¼ýÀÚ¸¦ ÀÚ½ÄÀ¸·Î »ý°¢
-	append »ç¿ë ¾Æ´Ô ÁÖÀÇ
-	L, RÀ» ´õ °£´ÜÈ÷ °è»êÇÒ ¼ö ÀÖ¾úÀ½, Á¶°Ç Á¶½ÉÇÒ °Í
+problem : https://www.acmicpc.net/problem/9019
+solution :
+	BFSë¥¼ ì´ìš©í•œ ì™„ì „íƒìƒ‰ ë¬¸ì œ
+	ìˆ«ìžë¥¼ nodeë¡œ ìƒê°í•˜ê³  D,S,L,R ìˆ˜í–‰ í›„ ìƒˆë¡œìš´ ìˆ«ìžë¥¼ ìžì‹ìœ¼ë¡œ ìƒê°
+	append ì‚¬ìš© ì•„ë‹˜ ì£¼ì˜
+	L, Rì„ ë” ê°„ë‹¨ížˆ ê³„ì‚°í•  ìˆ˜ ìžˆì—ˆìŒ, ì¡°ê±´ ì¡°ì‹¬í•  ê²ƒ
+	string ì—°ì‚° ë„ˆë¬´ ì†ë„ê°€ ëŠë¦¼, ê±°ê¾¸ë¡œ ì¶”ì í•´ì„œ ë‹µì— ë„ë‹¬í•  ìˆ˜ë„ ìžˆìŒ
 */
 #include <iostream>
 #include <queue>

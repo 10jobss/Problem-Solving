@@ -1,9 +1,8 @@
 /*
 problem : https://www.acmicpc.net/problem/1753
 solution :
-	Dijkstra ±âº»¹®Á¦
-	priority queue¸¦ È°¿ë (max heap)
-	¶Ç Ç®¾îº¼ °Í
+	Dijkstra ê¸°ë³¸ë¬¸ì œ
+	priority queueë¥¼ í™œìš© (max heap)
 */
 #include <cstdio>
 #include <vector>

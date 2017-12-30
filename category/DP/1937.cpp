@@ -2,10 +2,12 @@
 problem : https://www.acmicpc.net/problem/1937
 solution :
 	DFS + Top-down DP
-	d[y][x] = y�� x������ ������� �� �̵��� �� �ִ� ���� ��� ����
-	dfs�Լ� if���� ó���� ret += dfs(ny,nx)�� �ߴµ� �������� ������
-	�������� �ƴ� �ִ밪�̱� ������ tmp������ �� ����� ���̸� ���ϰ� �� �� �ִ밪�� dp�迭�� ����
-	�� ��ĺ��� �� ����ϰ� ������ �� ����. * �ٸ���� �ڵ� ����
+	처음에 단순 DFS로 풀었는데 TLE
+	i,j에서 시작했을 때 경로를 매번 계산할 필요가 없었음, 메모이제이션 생각
+	d[y][x] = y행 x열에서 출발했을 때 이동할 수 있는 최장 경로 길이
+	dfs함수 if문을 처음에 ret += dfs(ny,nx)로 했는데 누적값이 나왔음
+	누적값이 아닌 최대값이기 때문에 tmp변수에 각 경로의 길이를 구하고 그 중 최대값을 dp배열에 저장
+	이 방식보다 더 깔끔하게 구현할 수 있음. * 다른사람 코드 보기
 */
 #include <cstdio>
 #include <cstring>

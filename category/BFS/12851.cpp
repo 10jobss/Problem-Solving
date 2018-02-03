@@ -1,21 +1,21 @@
 /*
 problem : https://www.acmicpc.net/problem/12851
 solution :
-	https://www.acmicpc.net/problem/1697 ¿¡¼­ »ìÂ¦ º¯ÇüµÈ ¹®Á¦
-	±¸ÇöÀÌ ±î´Ù·Î¿üÀ½
-	1697¹øÀº ÃÖ´Ü½Ã°£À» ¹Ù·Î Ã£À¸¸é Å½»ö Á¾·áÇØµµ µÇÁö¸¸
-	12851¹ø °°Àº °æ¿ì °æ¿ìÀÇ ¼öµµ µûÁ®¾ß ÇÏ¹Ç·Î Å½»ö Á¾·áÇÒ ¼ö ¾øÀ½
+	https://www.acmicpc.net/problem/1697 ì—ì„œ ì‚´ì§ ë³€í˜•ëœ ë¬¸ì œ
+	ë¡œì§ì´ í—·ê°ˆë¦¬ê¸° ì‰¬ìš´ ìœ í˜•
+	1697ë²ˆì€ ìµœë‹¨ì‹œê°„ì„ ë°”ë¡œ ì°¾ìœ¼ë©´ íƒìƒ‰ ì¢…ë£Œí•´ë„ ë˜ì§€ë§Œ
+	12851ë²ˆ ê°™ì€ ê²½ìš° ê²½ìš°ì˜ ìˆ˜ë„ ë”°ì ¸ì•¼ í•˜ë¯€ë¡œ íƒìƒ‰ ì¢…ë£Œí•  ìˆ˜ ì—†ìŒ
 
-	1Â÷ ±¸Çö - ½ÃµµÇß´ø ¹æ¹ýÀº ¿¬»ê Á¾·ù¸¦ À§Ä¡¿Í pair·Î node·Î ¸¸µé°í
-	³ëµå°¡ -1 ¿¬»ê°á°ú ¿ÔÀ¸¸é ´ÙÀ½ Å½»ö ½Ã +1Àº ÇÒ ÇÊ¿ä¾ø°í (Á¦ÀÚ¸®·Î µ¹¾Æ°¡´Ï±î ÀÌ·± °æ¿ì´Â ÃÖ´Ü ½Ã°£ X)
-	if, else ¹® ³Ê¹« ¸¹¾ÆÁ®¼­ cutting ¸¹ÀÌ ÇßÁö¸¸ ¸Þ¸ð¸® ÃÊ°ú, TLE ¹Ýº¹..
+	1ì°¨ êµ¬í˜„ - ì‹œë„í–ˆë˜ ë°©ë²•ì€ ì—°ì‚° ì¢…ë¥˜ë¥¼ ìœ„ì¹˜ì™€ pairë¡œ nodeë¡œ ë§Œë“¤ê³ 
+	ë…¸ë“œê°€ -1 ì—°ì‚°ê²°ê³¼ ì™”ìœ¼ë©´ ë‹¤ìŒ íƒìƒ‰ ì‹œ +1ì€ í•  í•„ìš”ì—†ê³  (ì œìžë¦¬ë¡œ ëŒì•„ê°€ë‹ˆê¹Œ ì´ëŸ° ê²½ìš°ëŠ” ìµœë‹¨ ì‹œê°„ X)
+	if, else ë¬¸ ë„ˆë¬´ ë§Žì•„ì ¸ì„œ cutting ë§Žì´ í–ˆì§€ë§Œ ë©”ëª¨ë¦¬ ì´ˆê³¼, TLE ë°˜ë³µ..
 	 
-	2Â÷ ±¸Çö - ´Ü¼ø visitÀ» ÀÌ¿ëÇÏ¸é ±¸Çö ¸øÇÏ¹Ç·Î visit¹è¿­À» depth¸¦ ÀÌ¿ëÇØ¼­ »ý°¢
-	ÇØ´ç Á¤Á¡À» ÀÌ¹Ì ¹æ¹®ÇÑ °æ¿ì¶ó¸é depth¸¦ ºñ±³ÇØ¼­ depth°¡ ³·°Å³ª '°°Àº'(ÀÌ °æ¿ì¸¦ Á¶½É!) enqueue
-	depth¸¦ INF·Î ÃÊ±âÈ­ ÇÏ´Â °ÍÀÌ Áß¿äÇßÀ½ depthº¸´Ù Å« °æ¿ì ´õ ÀÌ»ó Å½»öÇÒ ÇÊ¿ä°¡ ¾ø±â ¶§¹® 
-	(k¸¦ ¹æ¹®Çßµç ¾ÈÇßµç »ó°ü¾øÀÌ)
-	*2, +1 ÇÒ °æ¿ì MAX ¹üÀ§¸¦ check ÇØ¾ßÁö RTE°¡ ¾È³² (°í·Á¾ÈÇØ¼­ 2¹øÀÌ³ª RTE)
-	MAX¸¦ 2*10^5ÇÑ ÀÌÀ¯´Â k=10^5 ÀÏ¶§ MAX¸¦ ³Ñ¾î°¡¸é k º¸´Ù Å« ÂÊ¿¡¼­ ¿À´Â °æ¿ì´Â ¾ø±â ¶§¹®
+	2ì°¨ êµ¬í˜„ - ë‹¨ìˆœ visitì„ ì´ìš©í•˜ë©´ êµ¬í˜„ ëª»í•˜ë¯€ë¡œ visitë°°ì—´ì„ depthë¥¼ ì´ìš©í•´ì„œ ìƒê°
+	í•´ë‹¹ ì •ì ì„ ì´ë¯¸ ë°©ë¬¸í•œ ê²½ìš°ë¼ë©´ depthë¥¼ ë¹„êµí•´ì„œ depthê°€ ë‚®ê±°ë‚˜ 'ê°™ì€'(ì´ ê²½ìš°ë¥¼ ì¡°ì‹¬!) enqueue
+	depthë¥¼ INFë¡œ ì´ˆê¸°í™” í•˜ëŠ” ê²ƒì´ ì¤‘ìš”í–ˆìŒ depthë³´ë‹¤ í° ê²½ìš° ë” ì´ìƒ íƒìƒ‰í•  í•„ìš”ê°€ ì—†ê¸° ë•Œë¬¸ 
+	(kë¥¼ ë°©ë¬¸í–ˆë“  ì•ˆí–ˆë“  ìƒê´€ì—†ì´)
+	*2, +1 í•  ê²½ìš° MAX ë²”ìœ„ë¥¼ check í•´ì•¼ì§€ RTEê°€ ì•ˆë‚¨ (ê³ ë ¤ì•ˆí•´ì„œ 2ë²ˆì´ë‚˜ RTE)
+	MAXë¥¼ 2*10^5í•œ ì´ìœ ëŠ” k=10^5 ì¼ë•Œ MAXë¥¼ ë„˜ì–´ê°€ë©´ k ë³´ë‹¤ í° ìª½ì—ì„œ ì˜¤ëŠ” ê²½ìš°ëŠ” ì—†ê¸° ë•Œë¬¸
 */
 #include <cstdio>
 #include <queue>

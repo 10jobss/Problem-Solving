@@ -1,25 +1,25 @@
 /*
 problem : https://www.acmicpc.net/problem/1261
 solution :
-	BFS Å½»ö º¯Çü
-	¾Æ¹«»ý°¢ ¾øÀÌ queue¸¦ ÀÌ¿ëÇØ¼­ BFS Å½»öÀ¸·Î Ç®¾úÀ¸³ª TLE (¹Ýµå½Ã °íÃÄ¾ßÇÒ ºÎºÐ!!)
-	ºÎ¼ö´Â º®ÀÇ °¹¼ö¸¦ ÃÖ¼ÒÈ­ÇØ¾ß ÇÏ±â ¶§¹®¿¡ ±æÀÎ °÷À» ¿ì¼±À¸·Î º¸´Â ·ÎÁ÷
-	dequeÀ» ÀÌ¿ëÇØ ±æÀÎ °æ¿ì push_front(), º®ÀÎ °æ¿ì push_back()
-	priority queue¸¦ ÀÌ¿ëÇÑ Ç®ÀÌµµ °¡´É
+	BFS íƒìƒ‰ ë³€í˜•
+	ì•„ë¬´ìƒê° ì—†ì´ queueë¥¼ ì´ìš©í•´ì„œ BFS íƒìƒ‰ìœ¼ë¡œ í’€ì—ˆìœ¼ë‚˜ TLE (ë°˜ë“œì‹œ ê³ ì³ì•¼í•  ë¶€ë¶„!!)
+	ë¶€ìˆ˜ëŠ” ë²½ì˜ ê°¯ìˆ˜ë¥¼ ìµœì†Œí™”í•´ì•¼ í•˜ê¸° ë•Œë¬¸ì— ê¸¸ì¸ ê³³ì„ ìš°ì„ ìœ¼ë¡œ ë³´ëŠ” ë¡œì§
+	dequeì„ ì´ìš©í•´ ê¸¸ì¸ ê²½ìš° push_front(), ë²½ì¸ ê²½ìš° push_back()
+	priority queueë¥¼ ì´ìš©í•œ í’€ì´ë„ ê°€ëŠ¥
 
-	<»õ·Ó°Ô ±ú´ÞÀº »ç½Ç>
-	1. memset > for loop > std::fill (¼Óµµ ºü¸¥ ¼ø)
-	std:fillÀÌ ¸Å¿ì ´À¸®´Ù´Â »ç½ÇÀ» ±ú´Þ¾Ò´Ù.. (fillÀ» °è¼Ó½è´Âµ¥ TLE, ¾ÕÀ¸·Ð fillÀ» ¾µ ÀÏ ÀÖÀ¸¸é ±×³É for loop)
+	<ìƒˆë¡­ê²Œ ê¹¨ë‹¬ì€ ì‚¬ì‹¤>
+	1. memset > for loop > std::fill (ì†ë„ ë¹ ë¥¸ ìˆœ)
+	std:fillì´ ë§¤ìš° ëŠë¦¬ë‹¤ëŠ” ì‚¬ì‹¤ì„ ê¹¨ë‹¬ì•˜ë‹¤.. (fillì„ ê³„ì†ì¼ëŠ”ë° TLE, ì•žìœ¼ë¡  fillì„ ì“¸ ì¼ ìžˆìœ¼ë©´ ê·¸ëƒ¥ for loop)
 	
-	2. c¿Í c++ÀÇ struct Â÷ÀÌÁ¡
+	2. cì™€ c++ì˜ struct ì°¨ì´ì 
 	https://www.geeksforgeeks.org/difference-c-structures-c-structures/
 
-	¹®Á¦¸¦ Ç® ‹š ´õ ÃÖÀûÈ­°¡ °¡´ÉÇÑÁö »ý°¢ÇØº¸´Â ½À°üÀ» °¡Á®¾ß°Ú´Ù
-	(¿ì¼±¼øÀ§¸¦ ºÎ¿©ÇÏ°Å³ª ÀÚ·á±¸Á¶¸¦ ÅëÇØ ÃÖÀûÈ­ Å½»öÀÌ °¡´ÉÇÑÁö)
-	¿ÏÀüÅ½»öÀÇ °æ¿ì´Â ¾îÂ¿ ¼ö ¾øÁö¸¸
-	°¡´ÉÇÏ´Ù¸é Å½»ö ½Ã ºÒÇÊ¿äÇÑ ºÎºÐÀ» ¹èÁ¦ÇØ ÃÖÀûÈ­ÇÏ´Â ½À°üÀ» °¡Á®¾ß °Ú´Ù(´À³¦Àº Backtracking °°´Ù..)
+	ìµœì í™”ê°€ ê°€ëŠ¥í•œì§€ ìƒê°í•´ë³´ëŠ” ìŠµê´€ì„ ê°€ì ¸ì•¼ê² ë‹¤
+	(ìš°ì„ ìˆœìœ„ë¥¼ ë¶€ì—¬í•˜ê±°ë‚˜ ìžë£Œêµ¬ì¡°ë¥¼ í†µí•´ ìµœì í™” íƒìƒ‰ì´ ê°€ëŠ¥í•œì§€)
+	ì™„ì „íƒìƒ‰ì˜ ê²½ìš°ëŠ” ì–´ì©” ìˆ˜ ì—†ì§€ë§Œ
+	ê°€ëŠ¥í•˜ë‹¤ë©´ íƒìƒ‰ ì‹œ ë¶ˆí•„ìš”í•œ ë¶€ë¶„ì„ ë°°ì œí•´ ìµœì í™”í•˜ëŠ” ìŠµê´€ì„ ê°€ì ¸ì•¼ ê² ë‹¤(ëŠë‚Œì€ Backtracking ê°™ë‹¤..)
 	
-	DP, Dijkstra¸¦ ÀÌ¿ëÇÑ Ç®ÀÌµµ ÇØº¼ °Í
+	DP, Dijkstraë¥¼ ì´ìš©í•œ í’€ì´ë„ í•´ë³¼ ê²ƒ
 */
 #include <cstdio>
 #include <cstring>

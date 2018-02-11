@@ -1,15 +1,15 @@
 /*
 problem : https://www.acmicpc.net/problem/9663
 solution :
-	Recursive¸¦ ÀÌ¿ëÇØ¼­ °¡´ÉÇÑ °æ¿ì¸¸ Å½»ö
-	ÁÖ¸Ô±¸±¸½ÄÀ¸·Î ±¸ÇöÇßÀ½
-	N*N¿¡ N°³ÀÇ queenÀ» ¹èÄ¡¾ßÇÏ´Âµ¥ queenÀÌ ³õ¿©ÀÖ´Â ÁÂÇ¥ÀÇ °¡·Î, ¼¼·Î, Áõ°¡ ¹× °¨¼Ò ´ë°¢¼±¿¡ ´Ù¸¥ queenÀ» ¹èÄ¡ ¸øÇÔ
-	'°¢ Çà¿¡´Â ´Ü 1°³ÀÇ queen¸¸ ¹èÄ¡' <-- ÀÌ »ý°¢ÀÌ Æ÷ÀÎÆ® (¿­·ÎÇØµµ »ó°ü¾øÀ½)
-	(y,x)¿¡ queenÀ» ¹èÄ¡ÇÏ°í °ø°ÝÇÒ ¼ö ÀÖ´Â ¸ðµç ÁÂÇ¥¸¦ check
-	ÀÌ ¶§ bool·Î ÇÏ¸é ÇØ´ç ´Ü°è¿¡¼­ checkÇÑ ÁÂÇ¥ ÀÌ¿Ü¿¡ Ãß°¡·Î ´õ ÇØÁ¦ÇÒ ¼ö ÀÖ¾î¼­
-	k¹øÂ° ¸»À» µÎ¾úÀ» ¶§ checkÇÑ °É µû·Î Ç¥½ÃÇÏ±â À§ÇØ int ¹è¿­·Î ¹Ù²Þ (!!)
-	cmd = 0 ÀÏ ¶§ set, cmd = 1 ÀÏ ¶§ reset
-	ÁÂÇ¥¿¡¼­ Áõ°¡ ´ë°¢¼±, °¨¼Ò ´ë°¢¼± ÁÂÇ¥ Çò°¥¸®±â ½¬¿ì´Ï ÁÖÀÇÇÒ °Í
+	Recursiveë¥¼ ì´ìš©í•´ì„œ ê°€ëŠ¥í•œ ê²½ìš°ë§Œ íƒìƒ‰
+	ì£¼ë¨¹êµ¬êµ¬ì‹ìœ¼ë¡œ êµ¬í˜„í–ˆìŒ
+	N*Nì— Nê°œì˜ queenì„ ë°°ì¹˜ì•¼í•˜ëŠ”ë° queenì´ ë†“ì—¬ìžˆëŠ” ì¢Œí‘œì˜ ê°€ë¡œ, ì„¸ë¡œ, ì¦ê°€ ë° ê°ì†Œ ëŒ€ê°ì„ ì— ë‹¤ë¥¸ queenì„ ë°°ì¹˜ ëª»í•¨
+	'ê° í–‰ì—ëŠ” ë‹¨ 1ê°œì˜ queenë§Œ ë°°ì¹˜' <-- ì´ ìƒê°ì´ í¬ì¸íŠ¸ (ì—´ë¡œí•´ë„ ìƒê´€ì—†ìŒ)
+	(y,x)ì— queenì„ ë°°ì¹˜í•˜ê³  ê³µê²©í•  ìˆ˜ ìžˆëŠ” ëª¨ë“  ì¢Œí‘œë¥¼ check
+	ì´ ë•Œ boolë¡œ í•˜ë©´ reset ì‹œ í•´ë‹¹ ë‹¨ê³„ì—ì„œ checkí•œ ì¢Œí‘œ ì´ì™¸ì— ì „ ë‹¨ê³„ì˜ ì¢Œí‘œë„ ì¶”ê°€ë¡œ ë”  reset í•  ìˆ˜ ìžˆì–´ì„œ
+	kë²ˆì§¸ ë§ì„ ë‘ì—ˆì„ ë•Œ checkí•œ ê±¸ ë”°ë¡œ í‘œì‹œí•˜ê¸° ìœ„í•´ int ë°°ì—´ë¡œ ë°”ê¿ˆ (!!)
+	cmd = 0 ì¼ ë•Œ set, cmd = 1 ì¼ ë•Œ reset
+	ì¢Œí‘œì—ì„œ ì¦ê°€ ëŒ€ê°ì„ , ê°ì†Œ ëŒ€ê°ì„  ì¢Œí‘œ í—·ê°ˆë¦¬ê¸° ì‰¬ìš°ë‹ˆ ì£¼ì˜í•  ê²ƒ
 */
 #include <cstdio>
 #include <cstring>

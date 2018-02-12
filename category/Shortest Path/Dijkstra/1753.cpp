@@ -1,7 +1,7 @@
 /*
 problem : https://www.acmicpc.net/problem/1753
 solution :
-	Dijkstra ±âº»
+	Dijkstra
 	Time complexity -> O(ElogV)
 */
 #include <cstdio>

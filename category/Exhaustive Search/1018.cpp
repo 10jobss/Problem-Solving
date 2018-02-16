@@ -3,17 +3,16 @@ Problem : https://www.acmicpc.net/problem/1753
 Author: 10jobss
 Time complexity: O(N*M)
 solution :
-	¸ðµç °æ¿ì¸¦ ´Ù ÇØº¼ ¼ö ¹Û¿¡ ¾ø´Â ¹®Á¦
-	ÁÂ»ó´ÜÀÇ ÁÂÇ¥¸¦ (i,j)·Î ÇÏ´Â 8*8 Ã¼½ºÆÇ¿¡ ´ëÇØ Â÷ÀÌÀÇ ÃÖ¼Ò¸¦ ±¸ÇÑ´Ù
+	ëª¨ë“  ê²½ìš°ë¥¼ ë‹¤ í•´ë³¼ ìˆ˜ ë°–ì— ì—†ëŠ” ë¬¸ì œ
+	ì¢Œìƒë‹¨ì˜ ì¢Œí‘œë¥¼ (i,j)ë¡œ í•˜ëŠ” 8*8 ì²´ìŠ¤íŒì— ëŒ€í•´ ì°¨ì´ì˜ ìµœì†Œë¥¼ êµ¬í•œë‹¤
 	(i,j) ---- (i,j+7)
 	  |
 	  |
 	(i+7,j)
-	cmp ÇÔ¼ö¿¡¼­ a ¹è¿­ÀÇ index Çò°¥¸± ¼ö ÀÖÀ¸´Ï Á¶½É
-	¸¸¾à Ã¼½ºÆÇÀÇ Å©±â°¡ 8*8ÀÌ ¾Æ´Ñ x*yÀÌ¸é ½Ã°£º¹Àâµµ´Â O(N*M*X*Y)
+	cmp í•¨ìˆ˜ì—ì„œ a ë°°ì—´ì˜ index í—·ê°ˆë¦´ ìˆ˜ ìžˆìœ¼ë‹ˆ ì¡°ì‹¬
+	ë§Œì•½ ì²´ìŠ¤íŒì˜ í¬ê¸°ê°€ 8*8ì´ ì•„ë‹Œ x*yì´ë©´ ì‹œê°„ë³µìž¡ë„ëŠ” O(N*M*X*Y)
 	https://www.acmicpc.net/board/view/22401
 */
-
 #include <cstdio>
 #include <algorithm>
 #define INF 987654321

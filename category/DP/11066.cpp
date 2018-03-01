@@ -3,13 +3,13 @@ Problem : https://www.acmicpc.net/problem/11066
 Author: 10jobss
 Time complexity: O(N^3)
 solution :
-	d[i][j] = i¹øÂ° ÆÄÀÏºÎÅÍ j¹øÂ° ÆÄÀÏÀ» ÇÕÃÆÀ» ¶§ ÃÖ¼Ò ºñ¿ë
-	ÇÕÄ£ ºñ¿ëÀÌ °è¼Ó ´©ÀûµÇ´Â ¹æ½ÄÀÌ¶ó¼­ ¹®Á¦¸¦ Á¦´ë·Î ÀÐ¾î¾ß ÇßÀ½
-	state cost - ´©Àû ºñ¿ë, now - ÇÕÃÄÁø ÆÄÀÏÀÇ ÃÖÁ¾ »óÅÂ 
-	ex) 10 20 30 ÆÄÀÏÀÌ ÀÖÀ» ¶§ 0,1,2 ¼øÀ¸·Î Â÷·Ê´ë·Î ÆÄÀÏÀ» ÇÕÄ£´Ù°íÇÏ¸é
-	(cost, now) º¯È­´Â
+	d[i][j] = ië²ˆì§¸ íŒŒì¼ë¶€í„° jë²ˆì§¸ íŒŒì¼ì„ í•©ì³¤ì„ ë•Œ ìµœì†Œ ë¹„ìš©
+	í•©ì¹œ ë¹„ìš©ì´ ê³„ì† ëˆ„ì ë˜ëŠ” ë°©ì‹ì´ë¼ì„œ ë¬¸ì œë¥¼ ì œëŒ€ë¡œ ì½ì–´ì•¼ í–ˆìŒ
+	cost - ëˆ„ì  ë¹„ìš©, now - í•©ì³ì§„ íŒŒì¼ì˜ ìµœì¢… ìƒíƒœ 
+	ex) 10 20 30 íŒŒì¼ì´ ìžˆì„ ë•Œ 0,1,2 ìˆœìœ¼ë¡œ ì°¨ë¡€ëŒ€ë¡œ íŒŒì¼ì„ í•©ì¹œë‹¤ê³ í•˜ë©´
+	(cost, now) ë³€í™”ëŠ”
 	(0,10) --> (30,30) --> (90,60)
-	°¡Àå ¾ÈÂÊ for¹®¿¡¼­ (i+k, j)ÀÇ °æ¿ì °í·ÁÇÒ ÇÊ¿ä¾øÀ½
+	ê°€ìž¥ ì•ˆìª½ forë¬¸ì—ì„œ (i+k, j)ì˜ ê²½ìš° ê³ ë ¤í•  í•„ìš”ì—†ìŒ
 */
 #include <cstdio>
 #include <algorithm>

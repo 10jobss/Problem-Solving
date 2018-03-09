@@ -3,14 +3,15 @@ Problem : https://www.acmicpc.net/problem/1717
 Author: 10jobss
 Time complexity: O(M*logN)
 solution :
-	Union-Find ±âº» ¹®Á¦
-	merge ÇÔ¼ö ³» =, == ¶§¹®¿¡ °è¼Ó Æ²·ÈÀ½ Á¶½ÉÇÏÀÚ Á¦¹ß
+	Union-Find ê¸°ë³¸ ë¬¸ì œ
+	merge í•¨ìˆ˜ ë‚´ =, == ë•Œë¬¸ì— ê³„ì† í‹€ë ¸ìŒ ì¡°ì‹¬í•˜ì ì œë°œ
 */
 #include <cstdio>
+#include <cstring>
 #define MAX 1000001
 int p[MAX];
 int find(int x) {
-	if (p[x]==x) return x;
+	if (p[x]<0) return x;
 	else return p[x] = find(p[x]);
 }
 void merge(int x, int y) {
@@ -20,11 +21,9 @@ void merge(int x, int y) {
 	p[y] = x;
 }
 int main() {
+	memset(p,-1,sizeof(p));
 	int n, m, cmd, a, b, i;
 	scanf("%d%d", &n, &m);
-	for (i = 0; i <= n; i++) {
-		p[i] = i;
-	}
 	while (m--) {
 		scanf("%d%d%d", &cmd, &a, &b);
 		if (cmd) {

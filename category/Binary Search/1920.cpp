@@ -3,12 +3,13 @@ Problem : https://www.acmicpc.net/problem/1920
 Author: 10jobss
 Time complexity: O((N+M)logN)
 solution :
-	±âº» Binary Search ¹®Á¦
-	N°³ÀÇ ¿ø¼Ò¸¦ std::sort ½Ã ½Ã°£º¹Àâµµ NlogN
-	N°³ÀÇ ¿ø¼Ò Áß M°³ ¿ø¼Ò¸¦ ÀÌºĞÅ½»öÇÏ´Â´Â ½Ã°£º¹Àâµµ MlogN
-	µû¶ó¼­ O((N+M)logN)
+	ê¸°ë³¸ Binary Search ë¬¸ì œ
+	ì´ë¶„íƒìƒ‰ì€ ì •ë ¬ëœ ë¦¬ìŠ¤íŠ¸ì—ì„œ ì‚¬ìš©í•´ì•¼ í•œë‹¤
+	Nê°œì˜ ì›ì†Œë¥¼ std::sort ì‹œ ì‹œê°„ë³µì¡ë„ NlogN
+	Nê°œì˜ ì›ì†Œ ì¤‘ Mê°œ ì›ì†Œë¥¼ ì´ë¶„íƒìƒ‰í•˜ëŠ”ëŠ” ì‹œê°„ë³µì¡ë„ MlogN
+	ë”°ë¼ì„œ O((N+M)logN)
 
-	algorithm Çì´õ¿¡ binary_search(begin, end, val) °ªÀÌ ±¸ÇöµÇ¾îÀÖ´Ù.
+	algorithm í—¤ë”ì— binary_search(begin, end, val) ê°’ì´ êµ¬í˜„ë˜ì–´ìˆë‹¤.
 */
 #include <cstdio>
 #include <algorithm>

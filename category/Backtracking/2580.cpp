@@ -3,13 +3,16 @@ Problem : https://www.acmicpc.net/problem/1753
 Author: 10jobss
 Time complexity: ??
 solution :
-	9*9���� Backtracking���� ���� �����ϰ� Ǯ����
-	ä���� �ϴ� ĭ�� ��ǥ�� vector�� �����ϰ�
-	(��, �� index�� 0~8�����̹Ƿ� row+col*10���� ��ǥ�� �����ߴ�)
-	index�� �������� Ž���ߴ�
-	��, ��, 3*3 �簢������ ����� ���ڸ� Ȯ���ϰ� ���� ���ڸ� �ϳ��� �־�鼭 ���ȣ��
-	���ͽÿ��� 0���� �������־���
-	�ε����� �Ǽ���������..
+	2048(Easy)문제랑 마찬가지로 처음에 BFS로 풀었다
+	2048문제는 메모리 제한이 512MB이고 이 문제는 128MB 였다
+	스도쿠 문제가 맵도 작고 더 간단하다고 생각했는데 MLE.. 
+	9*9여서 Backtracking으로 가장 무식하게 풀었다
+	채워야 하는 칸의 좌표를 vector에 저장하고
+	(행, 열 index가 0~8까지이므로 row+col*10으로 좌표를 압축했다)
+	index를 기준으로 탐색했다
+	행, 열, 3*3 사각형에서 사용한 숫자를 확인하고 없는 숫자를 하나씩 넣어가면서 재귀호출
+	복귀시에는 0으로 해제해주었다
+	인덱스를 실수하지말자..
 */
 #include <cstdio>
 #include <cstring>

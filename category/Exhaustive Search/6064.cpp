@@ -3,12 +3,12 @@ Problem : https://www.acmicpc.net/problem/6064
 Author: 10jobss
 Time complexity: O(N)
 solution :
-	´Ü¼øÈ÷ 1¾¿ Áõ°¡ÇØ¼­´Â O(MN)ÀÌ±â ¶§¹®¿¡ TLE ÀÌ´Ù
-	¾à°£?ÀÇ Æ®¸¯ÀÌ ÇÊ¿äÇÑµ¥ x, yÁß ÇÑ°¡Áö ±âÁØÀ» Àâ°í ±× ±âÁØ ½ÎÀÌÅ¬¸¸Å­ È®ÀÎÇØ ÁÖ¸é µÈ´Ù
-	¿¹¸¦ µé¾î x, y Áß x¸¦ ±âÁØÀÌ¶ó°í ÇÏ¸é Ç×»ó xÀÇ ½ÎÀÌÅ¬¸¸Å­ Áõ°¡½ÃÅ²´Ù
-	ÃÊ±â »óÅÂ¸¦ <x:x>, x¹øÂ° ÇØ¶ó°í °¡Á¤ÇÏ°í ¹Ýº¹¹®À» µ¹¸°´Ù
-	ÁÖÀÇÇÒ Á¡Àº x°¡ yÀÇ ÇÑ°èÀÎ nÀ» ³Ñ´ÂÁö ÃÊ±â¿¡ È®ÀÎÇØÁÖ¾î¾ß ÇÑ´Ù´Â Á¡
-	cnt°¡ lcmÀ» ³Ñ¾î°¡¸é ±×¸¸ Å½»öÇÑ´Ù
+	ë‹¨ìˆœížˆ 1ì”© ì¦ê°€í•´ì„œëŠ” O(MN)ì´ê¸° ë•Œë¬¸ì— TLE ì´ë‹¤
+	ì•½ê°„?ì˜ íŠ¸ë¦­ì´ í•„ìš”í•œë° x, yì¤‘ í•œê°€ì§€ ê¸°ì¤€ì„ ìž¡ê³  ê·¸ ê¸°ì¤€ ì‹¸ì´í´ë§Œí¼ í™•ì¸í•´ ì£¼ë©´ ëœë‹¤
+	ì˜ˆë¥¼ ë“¤ì–´ x, y ì¤‘ xë¥¼ ê¸°ì¤€ì´ë¼ê³  í•˜ë©´ í•­ìƒ xì˜ ì‹¸ì´í´ë§Œ(m)í¼ ì¦ê°€ì‹œí‚¨ë‹¤
+	ì´ˆê¸° ìƒíƒœë¥¼ <x:x>, xë²ˆì§¸ í•´ë¼ê³  ê°€ì •í•˜ê³  ë°˜ë³µë¬¸ì„ ëŒë¦°ë‹¤
+	ì£¼ì˜í•  ì ì€ yê°€ yì˜ í•œê³„ì¸ nì„ ë„˜ëŠ”ì§€ ì´ˆê¸°ì— í™•ì¸í•´ì£¼ì–´ì•¼ í•œë‹¤ëŠ” ì 
+	cntê°€ lcmì„ ë„˜ì–´ê°€ë©´ ê·¸ë§Œ íƒìƒ‰í•œë‹¤
 */
 #include <cstdio>
 int gcd(int a, int b) { return !b ? a : gcd(b, a%b); }

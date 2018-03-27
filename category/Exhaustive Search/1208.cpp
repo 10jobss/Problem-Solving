@@ -3,19 +3,19 @@ Problem : https://www.acmicpc.net/problem/1208
 Author: 10jobss
 Time complexity: ???
 solution :
-	N=20ÀÎ https://www.acmicpc.net/problem/1182 ¹®Á¦ °°Àº °æ¿ì´Â
-	Bitmask³ª Àç±Í È£Ãâ·Î ¸ðµç °æ¿ì¸¦ ´ÙÇØº¸¸é °¡´ÉÇÏÁö¸¸
-	ÀÌ ¹®Á¦´Â N=40ÀÌ±â ¶§¹®¿¡ 2^40 ÀÌ¹Ç·Î ½Ã°£³»¿¡ Ç® ¼ö ¾ø¾ú´Ù
+	N=20ì¸ https://www.acmicpc.net/problem/1182 ë¬¸ì œ ê°™ì€ ê²½ìš°ëŠ”
+	Bitmaskë‚˜ ìž¬ê·€ í˜¸ì¶œë¡œ ëª¨ë“  ê²½ìš°ë¥¼ ë‹¤í•´ë³´ë©´ ê°€ëŠ¥í•˜ì§€ë§Œ
+	ì´ ë¬¸ì œëŠ” N=40ì´ê¸° ë•Œë¬¸ì— 2^40 ì´ë¯€ë¡œ ì‹œê°„ë‚´ì— í’€ ìˆ˜ ì—†ì—ˆë‹¤
 
-	±âº»ÀûÀÎ ¾ÆÀÌµð¾î´Â ÀÔ·Â ¹è¿­À» 2ºÎºÐÀ¸·Î ³ª´©¾î¼­
-	°¢°¢ÀÇ ºÎºÐÁýÇÕÀ» »ý¼º ÈÄ Á¶ÇÕÇØ º¸´Â °ÍÀÌ¾ú´Ù
+	êµ¬ê¸€ë§ì„ í•´ë³´ë‹ˆ ê¸°ë³¸ì ì¸ ì•„ì´ë””ì–´ëŠ” ìž…ë ¥ ë°°ì—´ì„ 2ë¶€ë¶„ìœ¼ë¡œ ë‚˜ëˆ„ì–´ì„œ
+	ê°ê°ì˜ ë¶€ë¶„ì§‘í•©ì„ ìƒì„± í›„ ì¡°í•©í•´ ë³´ëŠ” ê²ƒì´ì—ˆë‹¤
 	
-	Ã³À½¿¡´Â µÎ ºÎºÐÀ¸·Î ³ª´« ºÎºÐÁýÇÕÀ» ´Ù½Ã ÀÌÁß for¹®À¸·Î ÇØ¼­ Æ²·È´Ù
-	(±â²¯ ³ª´«°É 2^20 * 2^20 À¸·Î ´Ù½Ã ÇÕÄ£ ²Ã)
-	ÀÌ°É 2^20À¸·Î ÁÙÀÏ ¼ö ÀÖ´Â °Ç ÇÑ ºÎºÐÁýÇÕ¿¡¼­ ÇÕÀÌ xÀÎ °æ¿ì
-	³ª¸ÓÁö¿¡¼­ S-xÀÎ °ª¸¸ Ã£¾ÆÁÖ¸é µÇ¾ú´Ù
-	ÀÌ·Ð»óÀ¸·Ð Æ÷ÀÎÅÍ µÎ°³·Î ÀÌºÐÅ½»öÇÏ¸é µÇÁö¸¸
-	STL¿¡ upper_bound¿Í lower_bound°¡ ÀÖ¾î¼­ ÀÌ¸¦ È°¿ëÇß´Ù
+	ì²˜ìŒì—ëŠ” ë‘ ë¶€ë¶„ìœ¼ë¡œ ë‚˜ëˆˆ ë¶€ë¶„ì§‘í•©ì„ ë‹¤ì‹œ ì´ì¤‘ forë¬¸ìœ¼ë¡œ í•´ì„œ í‹€ë ¸ë‹¤
+	(ê¸°ê» ë‚˜ëˆˆê±¸ 2^20 * 2^20 ìœ¼ë¡œ ë‹¤ì‹œ í•©ì¹œ ê¼´)
+	ì´ê±¸ 2^20ìœ¼ë¡œ ì¤„ì¼ ìˆ˜ ìžˆëŠ” ê±´ í•œ ë¶€ë¶„ì§‘í•©ì—ì„œ í•©ì´ xì¸ ê²½ìš°
+	ë‚˜ë¨¸ì§€ì—ì„œ S-xì¸ ê°’ë§Œ ì°¾ì•„ì£¼ë©´ ë˜ì—ˆë‹¤
+	ì´ë¡ ìƒìœ¼ë¡  í¬ì¸í„° ë‘ê°œë¡œ ì´ë¶„íƒìƒ‰í•˜ë©´ ë˜ì§€ë§Œ
+	STLì— upper_boundì™€ lower_boundê°€ ìžˆì–´ì„œ ì´ë¥¼ í™œìš©í–ˆë‹¤
 */
 #include <cstdio>
 #include <vector>

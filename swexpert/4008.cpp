@@ -1,76 +1,31 @@
 #include <cstdio>
 #include <cstring>
-int k, ans;
-int a[4], r[4], cmd[20][2];
+#include <algorithm>
+#define INF 987654321
+#define NINF -123456789
+using namespace std;
+int n, a[12], op[4], mx, mn;
 void _init() {
-	ans = 0;
-	memset(a, 0, sizeof(a));
-	memset(r, 0, sizeof(r));
-	memset(cmd, 0, sizeof(cmd));
+	mx = NINF, mn = INF;
+	memset(op, 0, sizeof(op));
 }
 void input() {
-	int x, n, dir;
-	scanf("%d", &k);
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 8; j++) {
-			scanf("%d", &x);
-			if (x) a[i] |= (x << (7 - j));
-		}
-	}
-	for (int i = 0; i < k; i++) {
-		scanf("%d%d", &n, &dir);
-		n--;
-		cmd[i][0] = n, cmd[i][1] = dir;
-	}
+	scanf("%d", &n);
+	for (int i = 0; i < 4; i++) scanf("%d", &op[i]);
+	for (int i = 0; i < n; i++) scanf("%d", &a[i]);
 }
-int pow(int p) {
-	int ret = 1;
-	for (int i = 0; i < p; i++) ret *= 2;
-	return ret;
-}
-void rotate() {
-	for (int i = 0; i < 4; i++) {
-		if (r[i] == 1) {
-			int z_bit = a[i] & (1 << 0) ? 1 : 0;
-			a[i] >>= 1;
-			if (z_bit) a[i] |= (1 << 7);
-		}
-		else if (r[i] == -1) {
-			int s_bit = a[i] & (1 << 7) ? 1 : 0;
-			a[i] <<= 1;
-			if (s_bit) {
-				a[i] |= (1 << 0);
-				a[i] &= ~(1 << 8);
-			}
-		}
+void solve(int k, int p, int m, int mt, int div, int res) {
+	if (k == n - 1) {
+		mx = max(mx, res);
+		mn = min(mn, res);
+		return;
 	}
-}
-void solve() {
-	for (int i = 0; i < k; i++) {
-		memset(r, 0, sizeof(r));
-		r[cmd[i][0]] = cmd[i][1];
-		int prev_b = a[cmd[i][0]] & (1 << 1) ? 1 : 0;
-		for (int j = cmd[i][0] - 1; j >= 0; j--) {
-			int next = a[j] & (1 << 5) ? 1 : 0;
-			if (prev_b^next) {
-				r[j] = -r[j + 1];
-				prev_b = a[j] & (1 << 1) ? 1 : 0;
-			}
-			else break;
-		}
-		int prev_f = a[cmd[i][0]] & (1 << 5) ? 1 : 0;
-		for (int j = cmd[i][0] + 1; j <= 3; j++) {
-			int next = a[j] & (1 << 1) ? 1 : 0;
-			if (prev_f^next) {
-				r[j] = -r[j - 1];
-				prev_f = a[j] & (1 << 5) ? 1 : 0;
-			}
-			else break;
-		}
-		rotate();
-	}
-	for (int i = 0; i < 4; i++) {
-		if (a[i] & (1 << 7)) ans += pow(i);
+	if (p) solve(k + 1, p - 1, m, mt, div, res + a[k + 1]);
+	if (m) solve(k + 1, p, m - 1, mt, div, res - a[k + 1]);
+	if (mt) solve(k + 1, p, m, mt - 1, div, res * a[k + 1]);
+	if (div) {
+		if (res > 0) solve(k + 1, p, m, mt, div - 1, res / a[k + 1]);
+		else solve(k + 1, p, m, mt, div - 1, -(-res / a[k + 1]));
 	}
 }
 int main() {
@@ -81,8 +36,8 @@ int main() {
 	for (int t = 1; t <= tc; t++) {
 		_init();
 		input();
-		solve();
-		printf("#%d %d\n", t, ans);
+		solve(0, op[0], op[1], op[2], op[3], a[0]);
+		printf("#%d %d\n", t, abs(mx - mn));
 	}
 	return 0;
 }

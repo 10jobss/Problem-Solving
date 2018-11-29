@@ -4,11 +4,20 @@ class ThePalindrome {
 public:
 	int find(string s) {
 		int len = s.length();
-		int lo = 0, hi = len - 1;
-		while (lo <= hi) {
-			s[lo] == s[hi] ? hi-- : len++;
-			lo++;
+		int ans = 0;
+		for (int i = len;; i++) {
+			bool flag = 1;
+			for (int j = 0;j<=i/2; j++) {
+				if (i - j - 1 < len && s[j] != s[i - j - 1]) {
+					flag = 0;
+					break;
+				}
+			}
+			if (flag) {
+				ans = i;
+				break;
+			}
 		}
-		return len;
+		return ans;
 	}
 };

@@ -16,7 +16,6 @@ public:
 		return ans;
 	}
 	ll f(int k, vs &rel) {
-		if (k >= n) return 0LL;
 		if (d[k]) return d[k];
 		int cnt = 0;
 		for (int i = 0; i < n; i++) {
@@ -29,8 +28,3 @@ public:
 		return d[k];
 	}
 };
-int main() {
-	CorporationSalary cs;
-	printf("%lld", cs.totalSalary({"NNYN","NNYN","NNNN","NYYN"}));
-	return 0;
-}

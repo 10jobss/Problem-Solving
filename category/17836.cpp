@@ -17,8 +17,7 @@ int main() {
 		for (int j = 0; j < m; j++)
 			scanf("%d", &a[i][j]);
 	queue<Node> q;
-	Node s(0, 0, false);
-	q.push(s);
+	q.push(Node(0, 0, false));
 	for (t = 0; t <= T; t++) {
 		if (chk[n - 1][m - 1][0] || chk[n - 1][m - 1][1]) break;
 		int qs = (int)q.size();

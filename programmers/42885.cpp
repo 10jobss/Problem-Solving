@@ -4,7 +4,7 @@
 using namespace std;
 
 int solution(vector<int> people, int limit) {
-    int anser = 0;
+    int answer = 0;
     sort(people.begin(), people.end());
     int lo = 0, hi = people.size() - 1;
     while(lo<=hi) {
